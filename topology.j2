@@ -1,0 +1,52 @@
+hostname {{ hostname }}
+
+vlan 10
+ name THESE
+vlan 20
+ name VLANS
+vlan 30
+ name WERE
+vlan 40
+ name CREATED
+vlan 50
+ name WITH
+vlan 60
+ name JINJA2
+vlan 70
+ name TEMPLATES
+
+{% if layer == 'core' or layer == 'distro' %}
+ip routing
+router eigrp 1
+ network 10.0.0.0 0.0.0.255
+{% endif %}
+
+banner motd # {{ hostname }} BANNER CREATED BY NETMIKO #
+
+{% if interfaces %}
+    {% for interface, config in interfaces.items() %}
+interface {{ interface }}
+        {%  if config['mode'] %}
+            {%  if config['mode'] == 'access' %}
+switchport mode {{ config['mode'] }}
+switchport access vlan {{ config['vlan'] }}
+        {%  elif config['mode'] == "trunk" %}
+switchport trunk encapsulation {{ config['encapsulation'] }}
+switchport trunk native vlan 1
+switchport mode {{ config['mode'] }}
+switchport trunk allowed vlan {{ config['allowed_vlans']}}
+                {% endif %}
+            {% endif %}
+    {% endfor %}
+{% endif %}
+
+int {{ mgmt_intf }}
+no shut
+ip address {{ mgmt_ip }} {{ mgmt_subnet }}
+
+
+
+
+
+
+

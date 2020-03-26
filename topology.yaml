@@ -1,0 +1,271 @@
+---
+all_devices:
+    core1:
+        hostname: Core1
+        mgmt_intf: vlan 10
+        mgmt_subnet: 255.255.255.0
+        mgmt_ip: 10.10.0.1
+        platform: vIOS
+        layer: core
+        interfaces:
+            gig0/0:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/1:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/2:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+    core2:
+        hostname: Core2
+        mgmt_intf: vlan 10
+        mgmt_ip: 10.10.0.2
+        mgmt_subnet: 255.255.255.0
+        platform: vIOS
+        layer: core
+        interfaces:
+            gig0/0:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/1:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/3:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+
+    distro1:
+        hostname: Distro1
+        mgmt_intf: vlan 10
+        mgmt_ip: 10.10.0.3
+        mgmt_subnet: 255.255.255.0
+        platform: vIOS
+        layer: distro
+        interfaces:
+            gig0/0:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/3:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig1/1:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig1/2:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,700
+            gig0/1:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/2:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig1/0:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig1/3:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+
+    distro2:
+        hostname: Distro2
+        mgmt_intf: vlan 10
+        mgmt_ip: 10.10.0.4
+        mgmt_subnet: 255.255.255.0
+        platform: vIOS
+        layer: distro
+        interfaces:
+            gig0/0:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/1:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/2:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/3:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig1/0:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig1/1:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig1/2:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig1/3:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+    access1:
+        hostname: Access1
+        mgmt_intf: vlan 10
+        mgmt_ip: 10.10.0.5
+        mgmt_subnet: 255.255.255.0
+        platform: vIOS
+        layer: access
+        interfaces:
+            gig0/0:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/1:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/3:
+                state: no shutdown
+                mode: access
+                vlan: 30
+    access2:
+        hostname: Access2
+        mgmt_intf: vlan 10
+        mgmt_ip: 10.10.0.6
+        mgmt_subnet: 255.255.255.0
+        platform: vIOS
+        layer: access
+        interfaces:
+            gig0/0:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/1:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/3:
+                state: no shutdown
+                mode: access
+                vlan: 30
+    access3:
+        hostname: Access3
+        mgmt_intf: vlan 10
+        mgmt_ip: 10.10.0.7
+        mgmt_subnet: 255.255.255.0
+        platform: vIOS
+        layer: access
+        interfaces:
+            gig0/0:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/1:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/3:
+                state: no shutdown
+                mode: access
+                vlan: 30
+    access4:
+        hostname: Access4
+        mgmt_intf: vlan 10
+        mgmt_ip: 10.10.0.8
+        mgmt_subnet: 255.255.255.0
+        platform: vIOS
+        layer: access
+        interfaces:
+            gig0/0:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/1:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans : 1,10,20,30,40,50,60,70
+            gig0/3:
+                state: no shutdown
+                mode: access
+                vlan: 30
+    access5:
+        hostname: Access5
+        mgmt_intf: vlan 10
+        mgmt_ip: 10.10.0.9
+        mgmt_subnet: 255.255.255.0
+        platform: vIOS
+        layer: access
+        interfaces:
+            gig0/0:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans: 1,10,20,30,40,50,60,70
+            gig0/1:
+                state: no shutdown
+                mode: trunk
+                encapsulation: dot1q
+                allowed_vlans: 1,10,20,30,40,50,60,70
+            gig0/3:
+                state: no shutdown
+                mode: access
+                vlan: 30
+core:
+    - core1
+    - core2
+distro:
+    - distro1
+    - distro2
+access:
+    - access1
+    - access2
+    - access3
+    - access4
+
+
+...
+

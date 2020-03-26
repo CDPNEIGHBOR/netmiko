@@ -1,0 +1,47 @@
+---
+all_devices:
+    core1:
+        device_type: 'cisco_ios'
+        ip: 10.0.0.1
+        username: 'stephen'
+        password: 'cisco'
+    core2:
+        device_type: 'cisco_ios'
+        ip: 10.0.0.2
+        username: 'stephen'
+        password: 'cisco'
+    distro1:
+        device_type: 'cisco_ios'
+        ip: 10.0.0.3
+        username: 'stephen'
+        password: 'cisco'
+    distro2:
+        device_type: 'cisco_ios'
+        ip: 10.0.0.4
+        username: 'stephen'
+        password: 'cisco'
+    access1:
+        device_type: 'cisco_ios'
+        ip: 10.0.0.5
+        username: 'stephen'
+        password: 'cisco'
+    access2:
+        device_type: 'cisco_ios'
+        ip: 10.0.0.6
+        username: 'stephen'
+        password: 'cisco'
+    access3:
+        device_type: 'cisco_ios'
+        ip: 10.0.0.7
+        username: 'stephen'
+        password: 'cisco'
+    access4:
+        device_type: 'cisco_ios'
+        ip: 10.0.0.8
+        username: 'stephen'
+        password: 'cisco'
+    access5:
+        device_type: 'cisco_ios'
+        ip: 10.0.0.9
+        username: 'stephen'
+        password: 'cisco'
